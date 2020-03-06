@@ -1,0 +1,62 @@
+nav {
+    display: flex;
+    width: 100vw;
+    justify-content: space-between;
+}
+
+.nav-left {
+    padding: 20px;
+}
+
+.nav-right {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 11vw;
+    background: teal;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+
+}
+
+.list-thing {
+    color: red;
+}
+
+#main {
+
+}
+
+article > p {
+    background: blue;
+    font-size: 100px;
+}
+
+.list-thing li:last-child {
+    background: orange;
+}
+
+.list-thing p:last-child {
+    background: yellow;
+}
+
+h1 + article {
+    border: 3px solid black;
+}
+
+#first + li {
+    text-decoration: underline;
+    font-weight: bold;
+    font-style: italic;
+}
+
+#first + p {
+    text-decoration: underline;
+    font-weight: bold;
+    font-style: italic;
+}
