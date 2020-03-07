@@ -1,16 +1,10 @@
 require 'byebug'
-require_relative "piece.rb"
-require_relative "rook.rb"
-require_relative "knight.rb"
-require_relative "bishop.rb"
-require_relative "queen.rb"
-require_relative "king.rb"
-require_relative "pawn.rb"
 
-# Dir["./pieces/*.rb"].each {|file| require_relative file }
+Dir["./pieces/*.rb"].each {|file| require_relative file }
 
 class Board
   attr_reader :grid
+  
   def initialize 
     @grid = Array.new(8){Array.new(8, [])}
     build_board
@@ -55,11 +49,10 @@ class Board
     end
   end
 
-  def move_piece(start_pos, end_pos)      # maybe prompt for rescue/retry instead of error
+  def move_piece(start_pos, end_pos)    
     raise "There's no piece there" if self[start_pos].is_a? NullPiece
     raise "invalid position" if !valid_pos?(end_pos)
-    # this is where the move happens
-    # debugger
+
     if valid_move?(start_pos,end_pos)
       self[end_pos] = self[start_pos] 
       self[start_pos] = NullPiece.instance

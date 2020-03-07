@@ -3,6 +3,7 @@ require_relative 'piece.rb'
 class Bishop < Piece
   include Slideable
   attr_reader :symbol
+  
   def initialize(color="white", board, pos)
     @symbol = :B
     super
