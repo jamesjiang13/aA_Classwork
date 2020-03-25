@@ -1313,3 +1313,51 @@ Processing by CatsController#edit as HTML
 Completed 200 OK in 275ms (Views: 226.7ms | ActiveRecord: 44.5ms)
 
 
+Started GET "/cats" for ::1 at 2020-03-23 17:39:31 -0700
+  [1m[35m (21.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jamesjiang/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by CatsController#index as HTML
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (7.6ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:4
+  Rendered cats/index.html.erb within layouts/application (280.5ms)
+Completed 200 OK in 1419ms (Views: 1001.1ms | ActiveRecord: 141.2ms)
+
+
+Started GET "/cats/new" for ::1 at 2020-03-23 17:39:37 -0700
+Processing by CatsController#new as HTML
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 504ms (Views: 503.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cats/6/edit" for ::1 at 2020-03-23 17:39:40 -0700
+Processing by CatsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mCat Load (27.4ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:28
+  Rendering cats/edit.html.erb within layouts/application
+  Rendered cats/edit.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 272ms (Views: 162.2ms | ActiveRecord: 64.4ms)
+
+
+Started GET "/cats/6/edit" for ::1 at 2020-03-23 17:40:17 -0700
+Processing by CatsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mCat Load (32.2ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:28
+  Rendering cats/edit.html.erb within layouts/application
+  Rendered cats/edit.html.erb within layouts/application (39.9ms)
+Completed 200 OK in 682ms (Views: 426.0ms | ActiveRecord: 32.2ms)
+
+
+Started GET "/cats/4/edit" for ::1 at 2020-03-23 17:40:21 -0700
+Processing by CatsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCat Load (28.1ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:28
+  Rendering cats/edit.html.erb within layouts/application
+  Rendered cats/edit.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 142ms (Views: 110.3ms | ActiveRecord: 28.1ms)
+
+

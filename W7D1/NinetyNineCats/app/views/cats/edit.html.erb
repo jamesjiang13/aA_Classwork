@@ -15,9 +15,9 @@
     </label><p>
 
     <label for="cat"> Cat Sex:
-        <input type="radio" id = "cat" name = "cat[sex]" value="M" <%='selected' if @cat.sex == 'M' %>>
+        <input type="radio" id = "cat" name = "cat[sex]" value="M" <%='checked' if @cat.sex == 'M' %>>
         <label for="male">male</label>
-        <input type="radio" id = "cat" name = "cat[sex]" value="F" <%='selected' if @cat.sex == 'F' %>>
+        <input type="radio" id = "cat" name = "cat[sex]" value="F" <%='checked' if @cat.sex == 'F' %>>
         <label for="female">female</label>
     </label><p>
 
@@ -26,9 +26,8 @@
     </label><p>
 
     <label for="cat" value="<%= @cat.description %>"> Cat Description: 
-        <textarea id="cat" name="cat[description]" value="<%= @cat.description %>"></textarea>
+        <textarea id="cat" name="cat[description]"><%= @cat.description %></textarea>
     </label><p>
 
     <input type="submit" value="Update cat!">
 </form>
-
