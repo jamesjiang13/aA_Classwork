@@ -1,0 +1,24 @@
+.nav-sections{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    // display: inline;
+    align-items: center;
+    border-bottom: 1px solid darkgrey;
+    justify-content: center;
+
+}
+
+.nav-sections li {
+    padding: 5px;
+    display: inline;
+}
+
+.nav-sections li:hover {
+    background-color: $gray;
+}
+
+.nav-sections li:last-child:hover {
+    text-decoration: underline;
+    background-color: transparent;
+}
