@@ -1,0 +1,19 @@
+<h1>Showing all the subs</h1>
+<ul>
+    <li>
+    <% @user.subs.each do |sub| %>
+        <p><%= sub.title %></p>
+        <form action="<%= edit_sub_url %>" method="POST">
+            <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+            <input type="hidden" name="_method" value="PATCH">
+
+            <input type="submit" name="<%= sub.id %>" value="edit sub">
+        </form>
+    <% end %>
+    </li>
+    </ul>
+
+<button> <a href="<%= new_sub_url %>">Create a Sub</a></button>
+
+
+
