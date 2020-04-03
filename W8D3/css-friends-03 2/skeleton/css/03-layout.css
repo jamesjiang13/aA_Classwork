@@ -1,0 +1,36 @@
+/* PHASE 3: Layout */
+.content, footer {
+    height: auto;
+    margin: 0 auto;
+    width: 900px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: lightgray;
+    
+}
+
+.content section {
+    padding: 10px;
+    border: 1px solid gray;
+    background-color: whitesmoke;
+    min-height: 200px;
+}
+.content-sidebar {
+    width: 20%;
+}
+
+.content-main {
+    width: 80%;
+}
+
+footer {
+    width: 900px;
+    min-height: 50px;
+    background-color: whitesmoke;
+    padding: 10px;
+    border: 1px solid gray;
+    margin: 0 auto;
+
+}
+
