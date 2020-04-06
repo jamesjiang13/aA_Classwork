@@ -108,11 +108,9 @@ Board.prototype.isValidPos = function (pos) {
 function _positionsToFlip (board, pos, color, dir, piecesToFlip=[]) {
   let matchColor = false;
   if(!board.isValidPos(pos)){
-    // console.log("isValidPos");
     return [];
   }
   if(board.isMine(pos, color) ){
-    // console.log("ismine");
     matchColor = true;
     return [];
   }
@@ -121,14 +119,12 @@ function _positionsToFlip (board, pos, color, dir, piecesToFlip=[]) {
  
   if ( !board.isValidPos(possiblePos) ) {  // checking if on the board or not, add another statement to check 
     return [];
-  } else if ((!board.isMine(possiblePos, color)) &&(board.isOccupied(possiblePos))) {
+  } else if ((!board.isMine(possiblePos, color)) && (board.isOccupied(possiblePos))) {
      piecesToFlip.push(possiblePos);
-    // console.log("hello")
-    // console.log(piecesToFlip)
   } else {
     return [];
   }
-// token we can replace
+  
   if(matchColor){
     return piecesToFlip.concat(_positionsToFlip(board, possiblePos, color, dir, piecesToFlip));
   }else{
