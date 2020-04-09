@@ -1,0 +1,34 @@
+title {
+  align-items: center;
+}
+
+li {
+  list-style-type: none
+  ;
+}
+.square {
+  width:150px;
+  height: 150px;
+  border: 2px #aaa4a4 solid;
+ 
+}
+
+.unchecked {
+  background: gray; 
+}
+
+.checked {
+  background:white;
+  color: black;
+}
+
+.box {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 462px;
+
+}
+.square:hover {
+    background: yellow;
+}
