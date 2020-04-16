@@ -1,0 +1,28 @@
+.board, h1 {
+  display: wrap;
+  flex-direction: row;
+  justify-content: center;
+  width: auto;
+  /* border: 2px solid orange; */
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: auto;
+  width: auto;
+  /* border: 1px solid black; */
+}
+
+.tile {
+    display: block;
+    border: 2px solid grey;
+    border-style: outset;
+    width: 20px;
+    height: 20px
+}
+
+.explored {
+    background-color: red;
+}
+
