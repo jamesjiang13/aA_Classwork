@@ -1,0 +1,255 @@
+  [1m[35m (1128.1ms)[0m  [1m[35mCREATE DATABASE "todoRails_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (1130.3ms)[0m  [1m[35mCREATE DATABASE "todoRails_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (155.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (26.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (13.6ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6687569578754773590)[0m
+  ↳ bin/rails:9
+  [1m[35m (11.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateTodos (20200417214747)
+  [1m[35m (17.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (80.1ms)[0m  [1m[35mCREATE TABLE "todos" ("id" bigserial primary key, "title" character varying NOT NULL, "body" character varying NOT NULL, "done" boolean NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20200417214747_create_todos.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (15.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200417214747"]]
+  ↳ bin/rails:9
+  [1m[35m (36.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (59.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (44.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-04-17 21:49:46.623936"], ["updated_at", "2020-04-17 21:49:46.623936"]]
+  ↳ bin/rails:9
+  [1m[35m (8.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(6687569578754773590)[0m
+  ↳ bin/rails:9
+  [1m[35m (12.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (13.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (2.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mTodo Create (19.1ms)[0m  [1m[32mINSERT INTO "todos" ("title", "body", "done", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "title1"], ["body", "body1"], ["done", false], ["created_at", "2020-04-17 22:13:17.202464"], ["updated_at", "2020-04-17 22:13:17.202464"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (3.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mTodo Create (0.5ms)[0m  [1m[32mINSERT INTO "todos" ("title", "body", "done", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "title2"], ["body", "body2"], ["done", false], ["created_at", "2020-04-17 22:13:17.227400"], ["updated_at", "2020-04-17 22:13:17.227400"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (3.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (1.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:21
+  [1m[36mTodo Create (0.4ms)[0m  [1m[32mINSERT INTO "todos" ("title", "body", "done", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "title3"], ["body", "body3"], ["done", false], ["created_at", "2020-04-17 22:13:17.234789"], ["updated_at", "2020-04-17 22:13:17.234789"]]
+  ↳ db/seeds.rb:21
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:21
+  [1m[36mTodo Load (9.5ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+Started GET "/" for 127.0.0.1 at 2020-04-17 15:15:20 -0700
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jamesjiang/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+
+NameError - uninitialized constant StaticPagesController:
+
+Started POST "/__better_errors/2a965c1dabd389e9/variables" for 127.0.0.1 at 2020-04-17 15:15:21 -0700
+Started GET "/" for ::1 at 2020-04-17 15:15:22 -0700
+
+NameError - uninitialized constant StaticPagesController:
+
+Started POST "/__better_errors/815f9545e707189c/variables" for ::1 at 2020-04-17 15:15:24 -0700
+Started GET "/" for ::1 at 2020-04-17 15:15:58 -0700
+
+NameError - uninitialized constant StaticPagesController:
+
+Started POST "/__better_errors/464022486064be7c/variables" for ::1 at 2020-04-17 15:16:00 -0700
+Started GET "/" for ::1 at 2020-04-17 15:16:05 -0700
+
+NameError - uninitialized constant StaticPagesController:
+
+Started POST "/__better_errors/f531524044626bbf/variables" for ::1 at 2020-04-17 15:16:06 -0700
+Started POST "/__better_errors/2a965c1dabd389e9/variables" for 127.0.0.1 at 2020-04-17 15:16:08 -0700
+Started GET "/" for 127.0.0.1 at 2020-04-17 15:16:08 -0700
+
+NameError - uninitialized constant StaticPagesController:
+
+Started GET "/" for ::1 at 2020-04-17 15:16:08 -0700
+
+NameError - uninitialized constant StaticPagesController:
+
+Started POST "/__better_errors/059ef1bceeaea1df/variables" for 127.0.0.1 at 2020-04-17 15:16:08 -0700
+Started POST "/__better_errors/387ae0576e9f53f2/variables" for ::1 at 2020-04-17 15:16:09 -0700
+Started GET "/" for 127.0.0.1 at 2020-04-17 15:16:10 -0700
+
+NameError - uninitialized constant StaticPagesController:
+
+Started POST "/__better_errors/167d3a51641b8c3f/variables" for 127.0.0.1 at 2020-04-17 15:16:11 -0700
+Started GET "/" for 127.0.0.1 at 2020-04-17 15:16:15 -0700
+
+NameError - uninitialized constant StaticPagesController:
+
+Started POST "/__better_errors/2d8237f043af569f/variables" for 127.0.0.1 at 2020-04-17 15:16:15 -0700
+Started GET "/" for 127.0.0.1 at 2020-04-17 15:17:17 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (4.2ms)
+Started GET "/" for ::1 at 2020-04-17 15:17:22 -0700
+Completed 200 OK in 5853ms (Views: 5824.0ms | ActiveRecord: 0.0ms)
+
+
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 232ms (Views: 228.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-04-17 15:17:50 -0700
+Processing by StaticPagesController#root as HTML
+Started GET "/" for 127.0.0.1 at 2020-04-17 15:17:51 -0700
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 468ms (Views: 315.9ms | ActiveRecord: 0.0ms)
+
+
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 508ms (Views: 416.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-04-17 15:18:04 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 387ms (Views: 333.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/todos" for 127.0.0.1 at 2020-04-17 15:18:37 -0700
+
+LoadError - Unable to autoload constant Api::TodosController, expected /Users/jamesjiang/Desktop/App Academy/aA_Classwork/W10D4/reduxTodo/todoRails/app/controllers/api/todos_controller.rb to define it:
+
+Started GET "/" for ::1 at 2020-04-17 15:18:44 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 222ms (Views: 203.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-04-17 15:19:00 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 121ms (Views: 116.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/todos" for ::1 at 2020-04-17 15:19:40 -0700
+
+LoadError - Unable to autoload constant Api::TodosController, expected /Users/jamesjiang/Desktop/App Academy/aA_Classwork/W10D4/reduxTodo/todoRails/app/controllers/api/todos_controller.rb to define it:
+
+Started GET "/" for 127.0.0.1 at 2020-04-17 15:19:57 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 97ms (Views: 92.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/todos" for 127.0.0.1 at 2020-04-17 15:19:59 -0700
+
+LoadError - Unable to autoload constant Api::TodosController, expected /Users/jamesjiang/Desktop/App Academy/aA_Classwork/W10D4/reduxTodo/todoRails/app/controllers/api/todos_controller.rb to define it:
+
+Started GET "/api/todos/" for 127.0.0.1 at 2020-04-17 15:20:58 -0700
+
+LoadError - Unable to autoload constant Api::TodosController, expected /Users/jamesjiang/Desktop/App Academy/aA_Classwork/W10D4/reduxTodo/todoRails/app/controllers/api/todos_controller.rb to define it:
+
+Started GET "/" for 127.0.0.1 at 2020-04-17 15:23:33 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (594.3ms)
+Completed 200 OK in 1519ms (Views: 1458.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-04-17 15:23:36 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 66ms (Views: 57.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/todos" for 127.0.0.1 at 2020-04-17 15:23:38 -0700
+
+LoadError - Unable to autoload constant Api::TodosController, expected /Users/jamesjiang/Desktop/App Academy/aA_Classwork/W10D4/reduxTodo/todoRails/app/controllers/api/todos_controller.rb to define it:
+
+Started GET "/api/todos" for 127.0.0.1 at 2020-04-17 15:23:41 -0700
+
+LoadError - Unable to autoload constant Api::TodosController, expected /Users/jamesjiang/Desktop/App Academy/aA_Classwork/W10D4/reduxTodo/todoRails/app/controllers/api/todos_controller.rb to define it:
+
+Started GET "/api/todos" for ::1 at 2020-04-17 15:23:54 -0700
+
+LoadError - Unable to autoload constant Api::TodosController, expected /Users/jamesjiang/Desktop/App Academy/aA_Classwork/W10D4/reduxTodo/todoRails/app/controllers/api/todos_controller.rb to define it:
+
+Started GET "/api/todos" for ::1 at 2020-04-17 15:25:02 -0700
+
+LoadError - Unable to autoload constant Api::TodosController, expected /Users/jamesjiang/Desktop/App Academy/aA_Classwork/W10D4/reduxTodo/todoRails/app/controllers/api/todos_controller.rb to define it:
+
+Started GET "/" for ::1 at 2020-04-17 15:26:14 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 300ms (Views: 284.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-04-17 15:26:16 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 164ms (Views: 156.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/todos" for 127.0.0.1 at 2020-04-17 15:26:18 -0700
+Processing by Api::TodosController#index as */*
+  [1m[36mTodo Load (15.6ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/api/todos_controller.rb:7
+Completed 200 OK in 208ms (Views: 30.7ms | ActiveRecord: 151.4ms)
+
+
+Started GET "/api/todos" for ::1 at 2020-04-17 15:26:19 -0700
+Processing by Api::TodosController#index as */*
+  [1m[36mTodo Load (0.7ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/api/todos_controller.rb:7
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-04-17 15:29:45 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 170ms (Views: 163.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-04-17 15:32:28 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (88.1ms)
+Completed 200 OK in 388ms (Views: 370.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-04-17 15:39:21 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 276ms (Views: 260.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-04-17 15:39:35 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 237ms (Views: 231.6ms | ActiveRecord: 0.0ms)
+
+
